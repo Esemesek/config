@@ -34,9 +34,6 @@ Plugin 'auto-pairs-gentle'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-" Indent guides
-Plugin 'nathanaelkane/vim-indent-guides'
-
 " Change indicator
 Plugin 'airblade/vim-gitgutter'
 
@@ -51,7 +48,7 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 filetype plugin on
-
+  
 " Syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
