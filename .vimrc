@@ -7,8 +7,8 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-"Molokai color scheme
-Plugin 'tomasr/molokai'
+" seoul256 color scheme
+Plugin 'junegunn/seoul256.vim'
 
 " Nerd tree
 Plugin 'scrooloose/nerdtree'
@@ -21,9 +21,24 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'maksimr/vim-jsbeautify'
 
+" Syntax checking
+Plugin 'scrooloose/syntastic'
+
+" Typescript
+Plugin 'leafgarland/typescript-vim'
+
+" Auto pairing brackets
+Plugin 'auto-pairs-gentle'
+
 " Statusbar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
+" Indent guides
+Plugin 'nathanaelkane/vim-indent-guides'
+
+" Change indicator
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 
@@ -37,10 +52,23 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 filetype plugin on
 
+" Syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Autopairing settings
+let g:AutoPairsUseInsertedCount = 1
+
 " Visuals
 set term=screen-256color
 syntax enable
-colorscheme molokai
+colo seoul256-light
 
 set tabstop=2
 set softtabstop=2
@@ -52,4 +80,4 @@ set wildmenu
 set showmatch
 set incsearch
 set hlsearch
-
+set updatetime=250
