@@ -34,8 +34,11 @@ Plugin 'auto-pairs-gentle'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-" Change indicator
+" Git change indicator
 Plugin 'airblade/vim-gitgutter'
+
+" Highlight whitespaces
+Plugin 'ntpeters/vim-better-whitespace'
 
 call vundle#end()
 
@@ -47,8 +50,6 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-filetype plugin on
-  
 " Syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -67,9 +68,6 @@ set term=screen-256color
 syntax enable
 colo seoul256-light
 
-set tabstop=2
-set softtabstop=2
-set expandtab
 set number
 set showcmd
 set cursorline
@@ -78,3 +76,17 @@ set showmatch
 set incsearch
 set hlsearch
 set updatetime=250
+
+" Tab settings
+set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+
+" Whitespaces
+set list
+set listchars=space:.,tab:->,eol:¬
+
+" Extra whitespace highlighting
+highlight ExtraWhitespace ctermbg=red
+
+" Column line
+set colorcolumn=120
+
