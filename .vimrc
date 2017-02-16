@@ -7,8 +7,9 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-" seoul256 color scheme
+" color schemes I use
 Plugin 'junegunn/seoul256.vim'
+Plugin 'morhetz/gruvbox'
 
 " Nerd tree
 Plugin 'scrooloose/nerdtree'
@@ -20,9 +21,6 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'maksimr/vim-jsbeautify'
-
-" Syntax checking
-Plugin 'scrooloose/syntastic'
 
 " Typescript
 Plugin 'leafgarland/typescript-vim'
@@ -37,8 +35,14 @@ Plugin 'vim-airline/vim-airline-themes'
 " Git change indicator
 Plugin 'airblade/vim-gitgutter'
 
+" Git plugin
+Plugin 'tpope/vim-fugitive'
+
 " Highlight whitespaces
 Plugin 'ntpeters/vim-better-whitespace'
+
+" Ctrlpvim
+Plugin 'ctrlpvim/ctrlp.vim'
 
 call vundle#end()
 
@@ -50,23 +54,14 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 " Autopairing settings
 let g:AutoPairsUseInsertedCount = 1
 
 " Visuals
 set term=screen-256color
 syntax enable
-colo seoul256-light
+set background=dark
+colo gruvbox
 
 set number
 set showcmd
@@ -90,3 +85,6 @@ highlight ExtraWhitespace ctermbg=red
 " Column line
 set colorcolumn=120
 
+" Ctrlp vim bindings
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
