@@ -1,0 +1,12 @@
+[user]
+	name = Kacper Wiszczuk
+	email = kacperwiszczuk@gmail.com
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[core]
+	editor = vim
+[push]
+	default = simple
