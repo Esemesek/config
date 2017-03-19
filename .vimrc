@@ -11,6 +11,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'morhetz/gruvbox'
 
+" Tern for vim
+Plugin 'marijnh/tern_for_vim'
+Plugin 'valloric/youcompleteme'
+
 " Nerd tree
 Plugin 'scrooloose/nerdtree'
 

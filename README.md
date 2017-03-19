@@ -14,6 +14,8 @@ $ cp config/.gitconfig config/.tmux.conf config/.vimrc .
 $ vim +PluginInstall
 ```
 
+* Install YouCompleteMe. Instructions: https://github.com/Valloric/YouCompleteMe
+
 * Cleanup cloned repository
 ```bash
 $ rm -rf config/
