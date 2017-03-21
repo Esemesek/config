@@ -1,4 +1,4 @@
-" Plugins
+" Plugins {{{
 set nocompatible
 filetype off
 
@@ -7,59 +7,49 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-" color schemes I use
-Plugin 'junegunn/seoul256.vim'
-Plugin 'morhetz/gruvbox'
-
-" Nerd tree
+" Plugins for basic functions
 Plugin 'scrooloose/nerdtree'
-
-" Nerd commenter
 Plugin 'scrooloose/nerdcommenter'
-
-" Javascript support
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'maksimr/vim-jsbeautify'
-
-" Typescript
-Plugin 'leafgarland/typescript-vim'
-
-" Auto pairing brackets
 Plugin 'auto-pairs-gentle'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'ctrlpvim/ctrlp.vim'
 
-" Statusbar
+" Plugins for git
+Plugin 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive'
+
+" Plugins for styling
+Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
-" Git change indicator
-Plugin 'airblade/vim-gitgutter'
-
-" Git plugin
-Plugin 'tpope/vim-fugitive'
-
-" Highlight whitespaces
-Plugin 'ntpeters/vim-better-whitespace'
-
 call vundle#end()
-
 filetype plugin indent on
+" }}}
+" Mapleader shortcuts {{{
+" Change default mapleader
 let mapleader=","
-
-"Nerd tree settings
+" }}}
+" Nerd tree {{{
 map <C-n> :NERDTreeToggle<CR>
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-" Autopairing settings
+" }}}
+" Autopairing settings {{{
 let g:AutoPairsUseInsertedCount = 1
-
-" Visuals
+" }}}
+" Airline {{{
+let g:airline_theme='base16'
+" Improved tabs
+let g:airline#extensions#tabline#enabled = 1
+" Always show statusbar
+set laststatus=2
+" }}}
+" Visuals {{{
 set term=screen-256color
 syntax enable
 set background=dark
 colo gruvbox
-
+" }}}
+" UI Settings {{{
 set number
 set showcmd
 set cursorline
@@ -69,19 +59,44 @@ set incsearch
 set hlsearch
 set updatetime=250
 
-" Tab settings
-set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
-
-" Whitespaces
+" whitespaces
 set list
 set listchars=space:·,tab:->,eol:¬
 
-" Extra whitespace highlighting
-highlight ExtraWhitespace ctermbg=red
-
-" Column line
+" set columnline
 set colorcolumn=120
 
-" Find settings
-set path+=**
+" }}}
+" Tab settings {{{
+set tabstop=2
+set softtabstop=0
+set expandtab
+set shiftwidth=2
+set smarttab
+" }}}
+" Extra whitespace highlighting {{{
+highlight ExtraWhitespace ctermbg=red
+" }}}
+" Folding settings {{{
+" Enable folding
+set foldenable
 
+" Open most folds by default
+set foldlevelstart=10
+
+" Max folds limited to 10
+set foldnestmax=10
+
+" Open/close folds with whitespace
+nnoremap <space> za
+
+" Set fold method to indent
+set foldmethod=indent
+" }}}
+" Ctrlp {{{
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+" }}}
+" vim:foldmethod=marker:foldlevel=0

@@ -1,4 +1,7 @@
 # Welcome to my vim and tmux configuration
+# TODO:
+* Add better support for buffers
+* Consider adding ack.vim
 ### How to install?
 * Install [Vundle]
 ```bash
