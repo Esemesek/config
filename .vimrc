@@ -45,9 +45,6 @@ Plugin 'tpope/vim-fugitive'
 " Highlight whitespaces
 Plugin 'ntpeters/vim-better-whitespace'
 
-" Ctrlpvim
-Plugin 'ctrlpvim/ctrlp.vim'
-
 call vundle#end()
 
 filetype plugin indent on
@@ -81,7 +78,7 @@ set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 
 " Whitespaces
 set list
-set listchars=space:.,tab:->,eol:¬
+set listchars=space:·,tab:->,eol:¬
 
 " Extra whitespace highlighting
 highlight ExtraWhitespace ctermbg=red
@@ -89,6 +86,6 @@ highlight ExtraWhitespace ctermbg=red
 " Column line
 set colorcolumn=120
 
-" Ctrlp vim bindings
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+" Find settings
+set path+=**
+
