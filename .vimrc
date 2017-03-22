@@ -23,6 +23,12 @@ Plugin 'morhetz/gruvbox'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+" Javascript specific
+Plugin 'pangloss/vim-javascript'
+
+" Typescript specific
+Plugin 'leafgarland/typescript-vim'
+
 call vundle#end()
 filetype plugin indent on
 " }}}
