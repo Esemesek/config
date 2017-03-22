@@ -19,7 +19,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 
 " Plugins for styling
-Plugin 'morhetz/gruvbox'
+Plugin 'junegunn/seoul256.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -52,8 +52,7 @@ set laststatus=2
 " Visuals {{{
 set term=screen-256color
 syntax enable
-set background=dark
-colo gruvbox
+colo seoul256
 " }}}
 " UI Settings {{{
 set number
