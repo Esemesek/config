@@ -14,14 +14,24 @@ Plugin 'auto-pairs-gentle'
 Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'ctrlpvim/ctrlp.vim'
 
+" Tags
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
+
 " Plugins for git
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 
-" Plugins for styling
+" Color schemes
 Plugin 'junegunn/seoul256.vim'
+Plugin 'morhetz/gruvbox'
+
+" Statusbar
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
+" Indentation guides
+Plugin 'Yggdroot/indentLine'
 
 " Javascript specific
 Plugin 'pangloss/vim-javascript'
@@ -43,7 +53,10 @@ map <C-n> :NERDTreeToggle<CR>
 let g:AutoPairsUseInsertedCount = 1
 " }}}
 " Airline {{{
-let g:airline_theme='base16'
+" Fixed airline symbols
+let g:airline_powerline_fonts = 1
+" Airline theme
+let g:airline_theme='raven'
 " Improved tabs
 let g:airline#extensions#tabline#enabled = 1
 " Always show statusbar
@@ -52,7 +65,7 @@ set laststatus=2
 " Visuals {{{
 set term=screen-256color
 syntax enable
-colo seoul256
+colo gruvbox
 " }}}
 " UI Settings {{{
 set number
@@ -63,6 +76,7 @@ set showmatch
 set incsearch
 set hlsearch
 set updatetime=250
+set noshowmode
 
 " whitespaces
 set list
@@ -103,5 +117,11 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
+" }}}
+" Tags {{{
+" Let Vim walk up dir hierarachy from CWD to root
+set tags=tags;/
+" Use tags file found by Vim
+let g:easytags_dynamic_files=1
 " }}}
 " vim:foldmethod=marker:foldlevel=0
