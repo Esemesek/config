@@ -1,0 +1,53 @@
+{
+  "files.autoSave": "afterDelay",
+  "editor.fontFamily": "FiraCode-Regular",
+  "editor.fontLigatures": true,
+  "workbench.colorTheme": "LaserWave Italic",
+  "materialTheme.fixIconsRunning": false,
+  "workbench.iconTheme": "eq-material-theme-icons-darker",
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true
+
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true,
+
+  },
+  "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
+
+  //Flow
+  "javascript.validate.enable": false,
+  "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow",
+  // Vim settings
+  "editor.lineNumbers": "relative",
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<space>",
+
+  // Easymotion config
+  "vim.easymotion": true,
+  "vim.easymotionMarkerFontFamily": "Monaco",
+  "vim.otherModesKeyBindingsNonRecursive": [
+    {
+      "before": " ",
+      "after": ["leader", "leader", "leader", "b", "d", "w"]
+    }
+  ],
+  "workbench.startupEditor": "newUntitledFile",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+}
