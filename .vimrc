@@ -12,11 +12,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'auto-pairs-gentle'
 Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'ctrlpvim/ctrlp.vim'
-
-" Tags
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
 
 " Plugins for git
 Plugin 'airblade/vim-gitgutter'
@@ -25,10 +20,6 @@ Plugin 'tpope/vim-fugitive'
 " Color schemes
 Plugin 'junegunn/seoul256.vim'
 Plugin 'morhetz/gruvbox'
-
-" Statusbar
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 
 " Indentation guides
 Plugin 'Yggdroot/indentLine'
@@ -85,6 +76,7 @@ set listchars=space:·,tab:->,eol:¬
 " set columnline
 set colorcolumn=120
 
+set background=dark
 " }}}
 " Tab settings {{{
 set tabstop=2
